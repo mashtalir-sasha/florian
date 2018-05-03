@@ -1,0 +1,894 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	font-family: $default-font
+	overflow-x: hidden
+	background-color: #fff
+	input, textarea
+		outline: none
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+
+a:hover
+	text-decoration: none
+	color: initial
+
+a:focus
+	outline: none
+
+button
+	border: none
+	background-color: transparent
+	outline: none
+	&:focus
+		outline: none
+
+.main-nav
+	&.show
+		width: 100%
+	z-index: 20
+	width: 0
+	height: 100vh
+	color: #fff
+	position: fixed
+	top: 0
+	right: 0
+	transition: width ease .6s
+	overflow: hidden
+	&__patern
+		width: 100%
+		height: 100%
+		background-color: rgba(#000, .65)
+		z-index: -1
+	&__wrap
+		display: flex
+		position: absolute
+		top: 0
+		right: 0
+		width: 390px
+		height: 100vh
+		background-color: #000
+		padding: 0 20px
+	&__flex
+		width: 100%
+		margin: auto
+	&__logo
+		width: 180px
+		height: 140px
+		background-image: url(../img/logo-white.svg)
+		background-size: cover
+		margin: 0 auto 40px
+	&__ttl
+		font-family: $medium
+		font-size: 26px
+		text-transform: uppercase
+		text-align: center
+		margin-bottom: 40px
+	&__ul
+		list-style-type: none
+		padding-left: 0
+		margin-bottom: 0
+		li
+			margin-bottom: 20px
+			&:last-child
+				margin-bottom: 0
+			a
+				color: #fff
+				font-family: $title
+				font-size: 18px
+				line-height: 1
+				text-transform: uppercase
+	&__close
+		cursor: pointer
+		width: 18px
+		height: 18px
+		background-image: url(../img/close.svg)
+		background-size: cover
+		position: absolute
+		top: 30px
+		right: 30px
+
+.h100
+	height: calc(100vh - 220px)
+	max-height: 622px
+
+.head
+	position: relative
+	background-color: $green
+	margin-bottom: 45px
+	&-patern
+		font-family: $common
+		font-size: 50px
+		color: rgba(#E9EDDC, .69)
+		transform: rotate(90deg)
+		position: absolute
+		bottom: 450px
+		left: 0
+		&:before
+			content: ''
+			width: 55px
+			height: 57px
+			background-image: url(../img/head_arr.svg)
+			background-size: 55px 57px
+			transform: rotate(-90deg)
+			position: absolute
+			top: 20px
+			left: 105%
+	&:before
+		content: ''
+		width: 41.66667%
+		height: 90%
+		background-color: $accent
+		position: absolute
+		left: 8.33333%
+		top: -5%
+	&:after
+		content: ''
+		width: 41.66667%
+		height: 90%
+		background-image: url(../img/head_after.jpg)
+		background-size: cover
+		position: absolute
+		right: 8.34%
+		top: 5%
+	&-content
+		display: table
+		width: 100%
+		position: relative	
+		z-index: 1
+		padding: 15% 0
+		background-image: url(../img/head_content.jpg)
+		background-size: cover
+		&:before
+			content: ''
+			width: 90%
+			height: 86%
+			border: 1px solid #fff
+			position: absolute
+			top: 7%
+			left: 5%
+		&__ttl
+			display: table-cell
+			padding: 0 10%
+			vertical-align: middle
+			font-family: $medium
+			font-size: 44px
+			letter-spacing: 0.1em
+			color: #fff
+			span
+				display: block
+				text-align: right
+				strong
+					font-family: $title-bold
+					font-weight: normal
+	&-contact
+		display: table
+		margin-top: 40px
+		float: left
+		overflow: hidden
+		&__phone
+			display: block
+			text-align: center
+			font-family: $bold
+			font-size: 18px
+			letter-spacing: .1em
+			color: #333333
+			margin-bottom: 5px
+		&__link
+			position: relative
+			display: block
+			font-family: $bold
+			text-align: center
+			letter-spacing: .1em
+			color: #000
+			padding-bottom: 8px
+			&:before
+				content: ''
+				width: 40%
+				height: 1px
+				background-color: #000
+				position: absolute
+				bottom: 0
+				left: 50%
+				margin-left: -20%
+				transition: all ease .3s
+			&:hover:before
+				width: 100%
+				left: 0
+				margin-left: 0
+	&-logo
+		float: left
+		width: 180px
+		height: 140px
+		background-image: url(../img/logo-white.svg)
+		background-size: cover
+		margin: 40px 0
+
+.soc-link
+	display: table
+	margin: 0 auto
+	&__wrap
+		height: 100%
+	&__fb
+		display: block
+		width: 30px
+		height: 30px
+		background-image: url(../img/fb.svg)
+		background-size: 30px 30px
+		margin-bottom: 20px
+	&__in
+		display: block
+		width: 30px
+		height: 30px
+		background-image: url(../img/in.svg)
+		background-size: 30px 30px
+		margin-bottom: 150px
+
+.mnu-btn
+	position: relative
+	z-index: 1
+	display: table
+	width: 50px
+	height: 50px
+	background-image: url(../img/mnu-btn.svg)
+	background-size: 50px 50px
+	margin: 20px auto 0
+
+.about
+	padding: 45px 0
+	&-ttl
+		position: relative
+		font-family: $title
+		font-size: 30px
+		text-align: center
+		color: #333333
+		padding-bottom: 70px
+		margin-bottom: 45px
+		&:before
+			content: ''
+			width: 56px
+			height: 56px
+			background-image: url(../img/about-ttl_before.svg)
+			background-size: 56px 56px
+			position: absolute
+			bottom: 0
+			right: 50%
+			margin-right: 10px
+		&:after
+			content: ''
+			width: 56px
+			height: 56px
+			background-image: url(../img/about-ttl_after.svg)
+			background-size: 56px 56px
+			position: absolute
+			bottom: 0
+			left: 50%
+			margin-left: 10px
+	&-item
+		position: relative
+		margin-top: 20px
+		&.no-margin
+			margin-top: 0
+		&__img
+			height: 320px
+			background-size: cover
+			&_i1
+				background-image: url(../img/about_img1.jpg)
+			&_i2
+				background-image: url(../img/about_img2.jpg)
+			&_i3
+				background-image: url(../img/about_img3.jpg)
+			&_i4
+				height: 660px
+				background-image: url(../img/about_img4.jpg)
+			&_i5
+				background-image: url(../img/about_img5.jpg)
+			&_i6
+				background-image: url(../img/about_img6.jpg)
+			&_i7
+				background-image: url(../img/about_img7.jpg)
+			&_i8
+				background-image: url(../img/about_img8.jpg)
+			&_i9
+				background-image: url(../img/about_img9.jpg)
+		&__wrap
+			position: relative
+			&:before
+				content: ''
+				width: 90%
+				height: 90%
+				border: 1px solid #000
+				position: absolute
+				top: 5%
+				left: 5%
+		&__txt
+			display: table
+			width: 300px
+			height: 80px
+			background-color: $accent
+			padding: 0 9px
+			position: absolute
+			bottom: 0
+			left: 50%
+			margin-left: -150px
+			span
+				display: table-cell
+				vertical-align: middle
+				font-family: $title-bold
+				font-size: 20px
+				letter-spacing: .05em
+				text-align: center
+				color: #fff
+
+.why
+	position: relative
+	padding: 45px 0
+	margin: 45px 0 100px
+	background-color: $green
+	&:after
+		content: ''
+		width: 100%
+		height: 215px
+		background-color: inherit
+		left: 0
+		position: absolute;
+		right: 0
+		transform: skewY(3deg)
+		transform-origin: 100%
+		z-index: -1
+	&__ttl
+		position: relative
+		font-family: $title
+		font-size: 30px
+		letter-spacing: .1em
+		text-align: center
+		padding-bottom: 70px
+		&:before
+			content: ''
+			width: 56px
+			height: 56px
+			background-image: url(../img/about-ttl_before.svg)
+			background-size: 56px 56px
+			position: absolute
+			bottom: 0
+			right: 50%
+			margin-right: 10px
+		&:after
+			content: ''
+			width: 56px
+			height: 56px
+			background-image: url(../img/about-ttl_after.svg)
+			background-size: 56px 56px
+			position: absolute
+			bottom: 0
+			left: 50%
+			margin-left: 10px
+	&__img
+		margin: 0 auto 20px
+	&__txt
+		font-size: 18px
+		letter-spacing: .1em
+		text-align: center
+	&__patern
+		position: absolute
+		bottom: -100px
+		left: 0
+		font-family: $common
+		font-size: 150px
+		color: rgba(#C6CB9D, .2)
+
+.first-form
+	position: relative
+	padding: 45px 0
+	background-color: #F2F2F2
+	margin-top: 100px
+	&:before
+		content: ''
+		width: 100%
+		height: 215px
+		background-color: inherit
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		transform: skewY(3deg)
+		transform-origin: 100%
+		z-index: -1
+	&__wrap
+		position: relative
+		&:before
+			content: ''
+			width: 330px
+			height: 255px
+			background-image: url(../img/first-form_logo.svg)
+			background-size: cover
+			position: absolute
+			bottom: 0
+			left: -160px
+	&__imgwrap
+		position: relative
+	&__patern
+		position: absolute
+		bottom: -80px
+		right: -160px
+		font-family: $common
+		font-size: 100px
+		color: rgba(#FFFFFF, .74)
+	&__img
+		margin: 0 auto
+
+.reviews
+	position: relative
+	padding: 90px 0
+	background-image: url(../img/reviews_bg.jpg)
+	background-size: cover
+	&-patern
+		position: absolute
+		bottom: 0
+		right: 20px
+		font-family: $common
+		font-size: 100px
+		line-height: 1
+		z-index: 1
+		color: rgba(255,255,255,.74)
+	&:before
+		content: ''
+		width: 100%
+		height: 80%
+		background: rgba(255, 255, 255, 0.3)
+		position: absolute
+		left: 0
+		right: 0
+		top: 10%
+	&__ttl
+		position: relative
+		z-index: 1
+		font-family: $medium
+		font-size: 30px
+	&__slide
+		overflow: hidden
+	&-slider
+		&__wrap
+			position: relative
+			float: right
+			background-color: #fff
+			max-width: 850px
+			padding: 40px 100px
+			&:before
+				content: ''
+				width: 90%
+				height: 90%
+				border: 1px solid #000
+				position: absolute
+				top: 5%
+				left: 5%
+		&__ttl
+			font-size: 20px
+			text-align: center
+			position: relative
+			padding-bottom: 70px
+			&:before
+				content: ''
+				width: 56px
+				height: 56px
+				background-image: url(../img/about-ttl_before.svg)
+				background-size: 56px 56px
+				position: absolute
+				bottom: 0
+				right: 50%
+				margin-right: 10px
+			&:after
+				content: ''
+				width: 56px
+				height: 56px
+				background-image: url(../img/about-ttl_after.svg)
+				background-size: 56px 56px
+				position: absolute
+				bottom: 0
+				left: 50%
+				margin-left: 10px
+		&__txt
+			letter-spacing: .1em
+			text-align: center
+		&__img
+			position: absolute
+			top: 50%
+			margin-top: -102px
+			left: 0
+			z-index: 2
+
+.slick-slide
+	outline: none
+
+.slide-wrap
+	display: table
+	position: relative
+	overflow: hidden
+	margin: 0 auto
+	padding-left: 130px
+
+.slick-arrow
+	cursor: pointer
+	width: 42px
+	height: 42px
+	background-color: #fff
+	border-radius: 100%
+	font-size: 0
+	transition: background-color ease .3s
+	position: absolute
+	top: 50%
+	margin-top: -21px
+	&.slick-prev
+		background-image: url(../img/arr_left.svg)
+		background-size: 30px 30px
+		background-repeat: no-repeat
+		background-position: 6px 6px
+		left: -65px
+	&.slick-next
+		background-image: url(../img/arr_right.svg)
+		background-size: 30px 30px
+		background-repeat: no-repeat
+		background-position: 6px 6px
+		right: -65px
+	&:hover
+		background-color: #858C3B
+		&.slick-prev
+			background-image: url(../img/arr_left_hover.svg)
+		&.slick-next
+			background-image: url(../img/arr_right_hover.svg)
+
+.steps
+	position: relative
+	padding: 45px 0
+	background-color: $green
+	&:before
+		content: ''
+		width: 100%
+		height: 215px
+		background-color: inherit
+		position: absolute
+		left: 0
+		right: 0
+		top: -215px
+		transform: skewY(-3deg)
+		transform-origin: 100%
+		z-index: -1
+	&:after
+		content: ''
+		width: 100%
+		height: 215px
+		background-color: inherit
+		position: absolute
+		left: 0
+		right: 0
+		transform: skewY(3deg)
+		transform-origin: 100%
+		z-index: -1
+	&__ttl
+		width: 100%
+		max-width: 650px
+		display: table
+		margin: 0 auto
+		font-family: $title
+		font-size: 30px
+		text-align: center
+		letter-spacing: .1em
+		margin-bottom: 45px
+	&-item
+		position: relative
+		&__img
+			margin: 0 auto 20px
+		&__txt
+			font-size: 18px
+			text-align: center
+		&__numb
+			position: absolute
+			top: 0
+			left: -25px
+			font-family: $common
+			font-size: 100px
+			line-height: 193px
+			color: rgba(#C6CB9D, .5)
+	&__btn
+		display: table
+		padding: 20px 50px
+		font-family: $bold
+		letter-spacing: .1em
+		text-align: center
+		color: #fff
+		background-color: #858C3B
+		border-bottom: 4px solid #6F752F
+		border-radius:  3px 
+		margin: 45px auto 0
+		transition: all ease .3s
+		&:hover
+			color: #fff
+			background-color: darken(#858C3B, 10%)
+	&__patern
+		width: 100%
+		height: 300px
+		background-image: url(../img/steps_patern.png)
+		background-position: center top
+		position: absolute
+		top: 0
+		left: 0
+
+.gallery
+	padding: 45px 0
+	&__ttl
+		position: relative
+		font-family: $medium
+		font-size: 30px
+		text-align: center
+		letter-spacing: .1em
+		padding-bottom: 70px
+		margin-bottom: 45px
+		&:before
+			content: ''
+			width: 56px
+			height: 56px
+			background-image: url(../img/about-ttl_before.svg)
+			background-size: 56px 56px
+			position: absolute
+			bottom: 0
+			right: 50%
+			margin-right: 10px
+		&:after
+			content: ''
+			width: 56px
+			height: 56px
+			background-image: url(../img/about-ttl_after.svg)
+			background-size: 56px 56px
+			position: absolute
+			bottom: 0
+			left: 50%
+			margin-left: 10px
+	&__img
+		&_i1
+			float: left
+			margin-right: 20px
+			margin-bottom: 20px
+			width: 65%
+		&_i2
+			float: left
+			margin-bottom: 20px
+			width: 29%
+		&_i3
+			float: left
+			width: 29%
+		&_i4
+			margin-bottom: 20px
+		&_i5
+			margin-bottom: 20px
+		&_i6
+			margin-bottom: 20px
+		&_i7
+			float: left
+			margin-right: 20px
+			margin-bottom: 20px
+		&_i8
+			width: 65%
+		&_i9
+			margin-bottom: 20px
+		&_i10
+			float: left
+			margin-right: 20px
+			margin-bottom: 20px
+			width: 65%
+		&_i11
+			float: left
+			margin-bottom: 20px
+			width: 29%
+		&_i12
+			float: left
+			width: 29%
+		&_i13
+			margin-bottom: 20px
+		&_i15
+			width: 39.5%
+			float: left
+			margin-right: 20px
+			margin-bottom: 20px
+		&_i16
+			width: 57%
+
+.second-form
+	margin-top: 215px
+	padding: 45px 0
+	background: linear-gradient(0.22deg, #FFFFFF -36.08%, rgba(255, 255, 255, 0) 99.53%), #F2F2F2
+	&__ico
+		height: 56px
+		margin-bottom: 40px
+		position: relative
+		&:before
+			content: ''
+			width: 56px
+			height: 56px
+			background-image: url(../img/about-ttl_before.svg)
+			background-size: 56px 56px
+			position: absolute
+			bottom: 0
+			right: 50%
+			margin-right: 10px
+		&:after
+			content: ''
+			width: 56px
+			height: 56px
+			background-image: url(../img/about-ttl_after.svg)
+			background-size: 56px 56px
+			position: absolute
+			bottom: 0
+			left: 50%
+			margin-left: 10px
+	&__txt
+		position: relative
+		font-size: 18px
+		color: #4F4F4F
+		text-align: center
+		&:last-child
+			margin-top: 40px
+			&:before
+				content: ''
+				width: 210px
+				height: 1px
+				background-color: #4F4F4F
+				position: absolute
+				top: -20px
+				left: 50%
+				margin-left: -110px
+	&__ttl
+		position: relative
+		font-family: $title
+		font-size: 26px
+		letter-spacing: .1em
+		text-align: center
+		color: #4F4F4F
+		padding-bottom: 70px
+		margin-bottom: 40px
+		&:before
+			content: ''
+			width: 56px
+			height: 56px
+			background-image: url(../img/about-ttl_before.svg)
+			background-size: 56px 56px
+			position: absolute
+			bottom: 0
+			right: 50%
+			margin-right: 10px
+		&:after
+			content: ''
+			width: 56px
+			height: 56px
+			background-image: url(../img/about-ttl_after.svg)
+			background-size: 56px 56px
+			position: absolute
+			bottom: 0
+			left: 50%
+			margin-left: 10px
+	&__field
+		display: block
+		width: 260px
+		background-color: #fff
+		border: none
+		border-radius: 3px
+		text-align: center
+		padding: 15px 0
+		margin: 0 auto
+	&__btn
+		display: table
+		width: 260px
+		padding: 15px 50px
+		font-family: $bold
+		letter-spacing: .1em
+		text-align: center
+		color: #fff
+		background-color: #858C3B
+		border-bottom: 4px solid #6F752F
+		border-radius:  3px 
+		margin: 0 auto
+		transition: all ease .3s
+		&:hover
+			color: #fff
+			background-color: darken(#858C3B, 10%)
+	&__txt
+		max-width: 400px
+		font-family: $title
+		text-align: center
+		margin: 0 auto 40px
+
+.rline
+	display: table
+	position: relative
+	margin: 0 auto 20px
+
+.rfield_error
+	visibility: hidden
+	position: absolute
+	bottom: 5px
+	right: 5px
+	font-size: 12px
+	color: red
+
+.foot
+	padding: 45px 0
+	background-color: #EEF2E4
+	position: relative
+	margin-top: 215px
+	&:before
+		content: ''
+		width: 100%
+		height: 215px
+		background-color: inherit
+		position: absolute
+		left: 0
+		right: 0
+		top: -215px
+		transform: skewY(-3deg)
+		transform-origin: 100%
+		z-index: -1
+	&__logo
+		max-width: 200px
+	&-list
+		list-style-type: none
+		padding-left: 0
+		margin-bottom: 0
+		&__item
+			font-family: $bold
+			letter-spacing: .1em
+			margin-bottom: 15px
+			&:last-child
+				margin-bottom: 0
+			a
+				color: #141414
+	&__link
+		display: block
+		font-family: $bold
+		letter-spacing: .05em
+		color: #141414
+		margin-bottom: 20px
+		&.last
+			margin-bottom: 0
+
+.cprt
+	display: block
+	margin-top: 40px
+	p
+		font-family: $bold
+		font-size: 12px
+		color: #010101
+
+.thn
+	h3
+		font-family: $medium
+		font-size: 24px
+		text-align: center
+		margin-bottom: 10px
+	p
+		font-size: 20px
+
+.modal
+	background-color: $green
+
+@import "media" // Always at the end
