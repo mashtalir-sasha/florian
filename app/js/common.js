@@ -33,7 +33,7 @@ $(function() {
 				$.fancybox.open('<div class="thn"><h3>Заявка отправлена!</h3><p>С Вами свяжутся в ближайшее время.</p></div>');
 				gtag('event','submit',{'event_category':'submit','event_action':goalId});
 				yaCounter48731360.reachGoal(goalId);
-				//fbq('track', 'Lead');
+				fbq('track', 'Lead');
 			})()
 		});
 		return false;
