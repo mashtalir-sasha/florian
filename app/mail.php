@@ -5,7 +5,7 @@
 	if(isset ($_POST['email'])) {$email=$_POST['email'];}
 
 	//$to = "mashtalir_sasha@ukr.net";
-	$to = "florainkiev@gmail.com";
+	$to = "florainkiev@gmail.com, svetalatayko88@gmail.com";
 
 	$message = "Форма: $title <br><br>";
 	if ( $name || $phonenum || $email ) {
